@@ -26,9 +26,9 @@ markdown: kramdown
 # ----------------------- #
 
 social:
+  - title: mail
+    icon: envelope-square
+    url: mailto:saimushi+phoenix@gmail.com
   - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
-  - title: linkedin
-    url: 
+    icon: twitter
+    url: https://twitter.com/saimushi
