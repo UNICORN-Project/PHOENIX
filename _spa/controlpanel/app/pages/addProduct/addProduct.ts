@@ -1,5 +1,6 @@
 import {Page} from 'ionic-angular';
 import {Modal, NavController, ViewController} from 'ionic-angular';
+import {AddProductConfirm} from '../addProductConfirm/addProductConfirm';
 
 @Page({
   templateUrl: 'build/pages/addProduct/addProduct.html'
@@ -16,5 +17,6 @@ export class AddProduct {
   }
 
   next() {
+    this.nav.push(AddProductConfirm);
   }
 }
