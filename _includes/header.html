@@ -1,0 +1,84 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#home">{{ site.title }}</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#services">Services</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+                <li id="authorized">
+                    <a class="settinglink" href="./setting.html"><strong class="accountName"></strong></a>
+                </li>
+                <li id="ctlpnl">
+                    <a class="page-scroll ctlpnllink" href="/controlpanel/">Control Panel</a>
+                </li>
+                <li id="unauthorize">
+                    <a class="signoutlink" href="javascript:void(0); return false;">Sign out.</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<section id="home">
+<!-- Header -->
+	<div class="intro-header">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="intro-message">
+						<h1>{{ page.title }}</h1>
+						<h3>{{ page.subTitle }}</h3>
+						<br>
+						<h2>1人でも多くの開発者が、1秒でも速く。</h2>
+{% if page.group == "index" %}
+						<div id="signup" class="col-lg-6 signup">
+							<form>
+								<h3>Sign in</h3>
+								<div class="form-group">
+									<input class="form-control" type="text" name="id" placeholder="AWS ACCESS KEY" required aria-required="true"/>
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="password" name="pass" placeholder="AWS ACCESS SECRET" required aria-required="true"/>
+								</div>
+								<div class="form-group">
+									<h4 class="error">&nbsp;</h4>
+									<button type="button"class="btn btn-default btn-lg signinbtn">Sign in the service.</button>
+								</div>
+								<div class="form-group">
+									<a class="btn btn-default btn-lg signuplink">Sign up the service here.</a>
+								</div>
+							</form>
+						</div>
+{% endif %}
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container -->
+
+	</div>
+	<!-- /.intro-header -->
+</section>

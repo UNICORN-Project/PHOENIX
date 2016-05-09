@@ -1,0 +1,14 @@
+var ctlpnl = {
+	getServiceList : function (){
+		
+	},
+	createNewService : function (){
+		$('body').append('<div></div>');
+	},
+};
+$(function(){
+	$('.new-service-link').click(function(){
+		ctlpnl.createNewService();
+		return false;
+	});
+});

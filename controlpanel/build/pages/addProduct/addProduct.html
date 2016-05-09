@@ -1,0 +1,20 @@
+
+<ion-navbar *navbar>
+  <ion-title>Add Product</ion-title>
+  <ion-buttons end>
+    <button royal (click)="close()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="addProduct">
+  <p>
+    あなたのAmazon環境用にPHOENIX用のVPCを追加します。
+    この作業は数分から数十分掛かる場合があります。
+    宜しければ下の「次へ」を押して下さい。
+  </p>
+  <p>
+    <button primary (click)="next()">次へ</button>
+  </p>
+</ion-content>
