@@ -116,7 +116,7 @@ $(function(){
 			authorize(accessKey, accessSecret, function(){
 				showAuthorize();
 				// サービス画面の切り替えと移動
-				location.href = '/controlpanel/';
+				location.href = './controlpanel/';
 			});
 			return false;
 		});
