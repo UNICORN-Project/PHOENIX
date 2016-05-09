@@ -1,0 +1,25 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>PHOENIX</ion-title>
+  <ion-buttons end>
+    <button royal (click)="showAdd()">
+      <ion-icon name="add"></ion-icon>
+      add Product
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="main" *ngIf="!isList()">
+  <h2>PHOENIXをはじめましょう。</h2>
+  <p>
+    右上の「ADD PRODUCT」を押しましょう。
+    PHOENIXのVPC環境があなたのAmazon環境上に追加されます。
+  </p>
+</ion-content>
+
+<ion-content padding class="main" *ngIf="isList()">
+  <h2>Products</h2>
+</ion-content>
