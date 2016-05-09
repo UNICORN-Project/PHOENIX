@@ -9,7 +9,16 @@
 </ion-navbar>
 
 <ion-content padding class="addProductConfirm">
-  <p>
-    作成するVPCパターンを選択して下さい。
-  </p>
+    <p>作成するVPCパターンを選択して下さい。</p>
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>
+          Basicパターン
+        </ion-card-title>
+        <img src="./images/vpc1-basic.png" (click)="showImageDetail('./images/vpc1-basic.png')">
+        <p>Multi A-Z</p>
+        <p>Aurora database</p>
+        <p>CodeDeploy suport</p>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

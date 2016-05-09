@@ -8627,3 +8627,7 @@ body {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 1.4rem;
   background-color: #fff; }
+
+@media (min-width: 768px) {
+  .addProductConfirm ion-card-content img {
+    width: 50%; } }

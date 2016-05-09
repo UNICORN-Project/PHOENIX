@@ -1,1 +1,2 @@
 ln -s /Users/xxx/controlpanel/ /Users/xxx/_spa/controlpanel/www
+ln -s /Users/saimushi/workspace/PHOENIX/controlpanel/ /Users/saimushi/workspace/PHOENIX/_spa/controlpanel/www

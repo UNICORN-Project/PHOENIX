@@ -8,7 +8,6 @@ import * as helpers from './directives/helpers';
 // Change the import if you want to change the first page, for example:
 // import { ImagePage as rootPage } from './pages/cards/cards';
 import {Main} from './pages/main/main';
-import {Page2} from './pages/page2/page2';
 
 
 @App({
