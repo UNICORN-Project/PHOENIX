@@ -1,5 +1,5 @@
 import {Page} from 'ionic-angular';
-import {Modal, NavController, ViewController, NavParams} from 'ionic-angular';
+import {Modal, NavController, NavParams, ViewController} from 'ionic-angular';
 
 @Page({
   templateUrl: 'build/pages/imageDetail/imageDetail.html',

@@ -17,6 +17,6 @@ export class AddProduct {
   }
 
   next() {
-    this.nav.push(AddProductConfirm);
+    this.nav.push(AddProductConfirm, {rootVC:this});
   }
 }

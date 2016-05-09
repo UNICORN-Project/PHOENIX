@@ -1,5 +1,5 @@
 import {Page} from 'ionic-angular';
-import {Modal, NavController, ViewController} from 'ionic-angular';
+import {Modal, NavController, NavParams, ViewController} from 'ionic-angular';
 import {ImageDetail} from '../imageDetail/imageDetail';
 import {AddProduct} from '../addProduct/addProduct';
 
@@ -8,13 +8,22 @@ import {AddProduct} from '../addProduct/addProduct';
 })
 
 export class AddProductConfirm {
-  constructor(nav: NavController, viewCtrl: ViewController) {
+  rootVC;
+
+  constructor(nav: NavController, params: NavParams, viewCtrl: ViewController) {
     this.nav = nav;
     this.viewCtrl = viewCtrl;
+    this.rootVC = params.get('rootVC');
   }
 
   close() {
-    this.viewCtrl.dismiss();
+    this.rootVC.viewCtrl.dismiss();
+    this.rootVC.viewCtrl.dismiss();
+  }
+
+  select(itemID) {
+    console.log("itemID=");
+    console.log(itemID);
   }
 
   showImageDetail(imageURL) {

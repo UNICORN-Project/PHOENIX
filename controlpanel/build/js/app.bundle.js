@@ -175,7 +175,7 @@ var AddProduct = (function () {
         this.viewCtrl.dismiss();
     };
     AddProduct.prototype.next = function () {
-        this.nav.push(addProductConfirm_1.AddProductConfirm);
+        this.nav.push(addProductConfirm_1.AddProductConfirm, { rootVC: this });
     };
     AddProduct = __decorate([
         ionic_angular_1.Page({
@@ -202,12 +202,23 @@ var ionic_angular_1 = require('ionic-angular');
 var ionic_angular_2 = require('ionic-angular');
 var imageDetail_1 = require('../imageDetail/imageDetail');
 var AddProductConfirm = (function () {
-    function AddProductConfirm(nav, viewCtrl) {
+    function AddProductConfirm(nav, params, viewCtrl) {
         this.nav = nav;
         this.viewCtrl = viewCtrl;
+        this.rootVC = params.get('rootVC');
     }
     AddProductConfirm.prototype.close = function () {
-        this.viewCtrl.dismiss();
+        this.rootVC.viewCtrl.dismiss();
+        this.rootVC.viewCtrl.dismiss();
+    };
+    AddProductConfirm.prototype.select = function (itemID) {
+        if (true == this.detailShowed) {
+            console.log("skip click event");
+            this.detailShowed = false;
+            return;
+        }
+        console.log("itemID=");
+        console.log(itemID);
     };
     AddProductConfirm.prototype.showImageDetail = function (imageURL) {
         var modal = ionic_angular_2.Modal.create(imageDetail_1.ImageDetail, { imageURL: imageURL });
@@ -219,7 +230,7 @@ var AddProductConfirm = (function () {
         ionic_angular_1.Page({
             templateUrl: 'build/pages/addProductConfirm/addProductConfirm.html'
         }), 
-        __metadata('design:paramtypes', [ionic_angular_2.NavController, ionic_angular_2.ViewController])
+        __metadata('design:paramtypes', [ionic_angular_2.NavController, ionic_angular_2.NavParams, ionic_angular_2.ViewController])
     ], AddProductConfirm);
     return AddProductConfirm;
 }());
